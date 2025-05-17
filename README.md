@@ -1,1 +1,1 @@
-mandingo-game
+Mandingo Game
