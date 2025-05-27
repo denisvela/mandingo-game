@@ -1,13 +1,257 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mandingo 1</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Denis Vela – Beyond the Limits</title>
+  <meta name="description" content="Landing oficial de Denis Vela, futbolista profesional. Control, velocidad y agilidad al servicio del juego." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+    body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
+    .card { @apply rounded-2xl shadow-lg p-6 bg-white/90 backdrop-blur-sm transition-transform duration-300 hover:scale-105; }
+    .stat-card { @apply bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center transition-all duration-300 hover:bg-white/20; }
+    .nav-link { @apply relative hover:text-blue-600 transition-colors duration-300; }
+    .nav-link::after {
+      content: '';
+      @apply absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-300;
+    }
+    .nav-link:hover::after { @apply w-full; }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Navegación -->
+  <header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
+      <a href="#hero" class="text-xl font-extrabold whitespace-nowrap hover:text-blue-600 transition-colors duration-300">Denis Vela</a>
+      <ul class="hidden md:flex gap-8 font-medium">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="#control" class="nav-link">Control</a></li>
+        <li><a href="#velocidad" class="nav-link">Velocidad</a></li>
+        <li><a href="#agilidad" class="nav-link">Agilidad</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed" style="background-image:url('https://www.asb.sk/wp-content/uploads/2023/01/6740939.jpeg.webp');">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
+    <div class="relative z-10 text-center text-white px-4" data-aos="fade-up">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-lg">Beyond the Limits</h1>
+      <p class="text-xl md:text-2xl mb-8 tracking-wider">Control · Velocidad · Agilidad</p>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        <a href="#contacto" class="group inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full font-semibold transition-all duration-300 hover:scale-105">
+          Conectar
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+        <a href="index.html" class="inline-block bg-white/10 backdrop-blur-sm text-white border border-white/30 hover:bg-white/20 py-3 px-8 rounded-full font-semibold transition-all duration-300 hover:scale-105">Inicio</a>
+      </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-16 bg-blue-600">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-4xl font-bold text-white mb-2">31 km/h</h3>
+        <p class="text-white/80">Velocidad Máxima</p>
+      </div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-4xl font-bold text-white mb-2">90 min</h3>
+        <p class="text-white/80">Resistencia</p>
+      </div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-4xl font-bold text-white mb-2">3+</h3>
+        <p class="text-white/80">Años de Experiencia</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Control Section -->
+  <section id="control" class="py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <h2 class="text-4xl font-bold mb-6 text-gray-900">Control & Técnica</h2>
+        <p class="text-lg mb-6 text-gray-700">Dominio del balón, minimización de pérdidas y visión colectiva para mantener el juego fluido.</p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">CE Mercantil</h3>
+              <p class="text-gray-600">Formación técnica de élite</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">CE Sabadell</h3>
+              <p class="text-gray-600">Desarrollo táctico avanzado</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">RCD Espanyol</h3>
+              <p class="text-gray-600">Cantera de élite nacional</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-4" data-aos="fade-left">
+        <img src="https://via.placeholder.com/150" alt="CE Mercantil" class="rounded-xl object-cover h-40 w-full hover:scale-105 transition-transform duration-300">
+        <img src="https://www.cesabadellfc.com/wp-content/uploads/2022/05/662x372a_26171956escut-web.png.jpg" alt="CE Sabadell" class="rounded-xl object-cover h-40 w-full hover:scale-105 transition-transform duration-300">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaqgBd8ohQUB4T9yhmJQIISKItyyfzUpgjmA&s" alt="RCD Espanyol" class="rounded-xl object-cover h-40 w-full hover:scale-105 transition-transform duration-300">
+      </div>
+    </div>
+  </section>
+
+  <!-- Velocidad Section -->
+  <section id="velocidad" class="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1" data-aos="fade-right">
+        <h2 class="text-4xl font-bold mb-6 text-gray-900">Velocidad Explosiva</h2>
+        <p class="text-lg mb-6 text-gray-700">Ruptura inmediata en transiciones, desmarques letales y recuperación defensiva veloz.</p>
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Velocidad punta</h3>
+                <p class="text-3xl font-bold text-blue-600">31 km/h</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Duración de partido</h3>
+                <p class="text-3xl font-bold text-blue-600">90 min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order-1 md:order-2" data-aos="fade-left">
+        <img src="https://scontent.fbts7-1.fna.fbcdn.net/v/t39.30808-6/499676643_1114815607357881_7320527694689636390_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=8fHhSLyT4asQ7kNvwHphvlO&_nc_oc=Admr35-iszAzendyPDx90LMt0OlvTcmYl3zIA_j9iAPdS9HOXvo-n93CSB8e3UEo_TA&_nc_zt=23&_nc_ht=scontent.fbts7-1.fna&_nc_gid=uhGmVpaPUEZYASaciO4wuQ&oh=00_AfJaxgHpXD2K5obF31EvVK0HZ_RGCLDQvDharHrkLAdsew&oe=683A9E1F" 
+             alt="Sprint Denis Vela" 
+             class="rounded-2xl shadow-lg object-cover w-full h-[500px] hover:scale-105 transition-transform duration-300">
+      </div>
+    </div>
+  </section>
+
+  <!-- Agilidad Section -->
+  <section id="agilidad" class="py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <h2 class="text-4xl font-bold mb-6 text-gray-900">Agilidad & Estabilidad</h2>
+        <p class="text-lg mb-6 text-gray-700">Cambio de dirección fulminante y sólida prevención de lesiones gracias a la flexibilidad desarrollada en el <strong>Breaking</strong>.</p>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">Entrenamiento Marcial</h3>
+              <p class="text-gray-600">Incrementa la coordinación y estabilidad</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">Breaking</h3>
+              <p class="text-gray-600">Flexibilidad y control corporal avanzado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <img src="https://scontent.fbts7-1.fna.fbcdn.net/v/t39.30808-6/492098784_2476422949364036_8413324601008250582_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=iylJu5rVIbkQ7kNvwE_1bFo&_nc_oc=AdnDwFw2KoK6v8vvM2EVhUH_LACunJecH2a9s42ULYIgxP-qhaJ5atlsaC6oCRVsgGI&_nc_zt=23&_nc_ht=scontent.fbts7-1.fna&_nc_gid=x_B9ZTmR8ZLGYSFbOKT22A&oh=00_AfL6I8rJGgXuhAYXi0p6w6jUOsNmnKrOnhToKyktg1c3dw&oe=683A8EBF" 
+             alt="Denis Vela Breaking" 
+             class="rounded-2xl shadow-lg object-cover w-full h-[500px] hover:scale-105 transition-transform duration-300">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+    <div class="max-w-xl mx-auto px-6 text-center" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-6">¿Listo para llevar tu equipo al siguiente nivel?</h2>
+      <p class="mb-8 text-lg text-gray-300">Contacta con Denis Vela para propuestas profesionales, colaboraciones o fichajes.</p>
+      <a href="mailto:info@denisvela.com" class="group inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 py-3 px-8 rounded-full font-semibold transition-all duration-300 hover:scale-105">
+        Enviar correo
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500">
+    © <span id="year"></span> Denis&nbsp;Vela. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+    
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
